@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles2.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <center>
+            <div class="head">
+                <center>Amazing Facts</center>
+            </div>
+            <ul class="nav nav-pills a">
+                <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="https://time.com/universe-space-photos/">Universe Pics</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link text-white" aria-current="page" href="rmore.html">Read More</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="about.html">About</a>
+                </li>
+                <li class="ms-auto nav-item" id="box">
+                    <form action="https://www.google.com/search" method="get">
+                        <input autocomplete = "off" autofocus name="q" placeholder="Web Search" type="text">
+                        <input type="submit" value="Search">
+                    </form>
+                </li>
+            </ul>
+        </center>
+
+        <center>
+            <div class="wrapper">
+                <div class="lower">
+                    <img src="Earth.jpg" alt="Picture of the earth">
+                    <h3 class="title">
+                       <u>Do you know?</u>
+                    </h3>
+                    <ul class="b">
+                        <li>The nearest star is 40,000,000,000,000 kilometres away from the earth?</li>
+                        <li>Your eye has 130,000,000 rods and 7,000,000 cones in it?</li>
+                        <li>You have 100,000 kilometres of blood vessels in your body?</li>
+                        <li>You can get in touch with the God who created these wonders?</li>
+                    </ul>
+                    <div class="side">
+                        Featured Links!
+                        <hr>
+                        <ol class="c">
+                            <li>
+                                <a href="https://www.thefactsite.com/100-amazing-facts-you-never-knew/">100 Random Facts</a>
+                            </li>
+                            <li>
+                                <a href="https://en.wikipedia.org/wiki/Wikipedia:On_this_day/Today">On this day</a>
+                            </li>
+                        </ol>
+                        <hr>
+                            <h4>
+                                Table of Contents
+                            </h4>
+                        <hr>
+                            <table style="font-size:medium;width:100%">
+                                <tr>
+                                  <td>1. </td>
+                                  <td id="contents">
+                                    <a href="universe.html">Amazing Facts about the Universe</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>2. </td>
+                                  <td id="contents">
+                                    <a href="man.html">Amazing Facts about the Man</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>3. </td>
+                                    <td id="contents">
+                                        <a href="tr.html">Amazing Facts about True Revolution</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4. </td>
+                                    <td id="contents">
+                                        <a href="rmore.html">Read More</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <button onclick="displayDate()" style="margin-top:60px" type="button" id="popover" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Current Time & Date" data-bs-content = Content>Displays Time & Date</button>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <center>
+            <div class="footer">
+                <ul class="nav nav-pills">
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" aria-current="page" href="#Terms">Terms and Conditions</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" aria-current="page" href="#Support">Support</a>
+                    </li>
+                    <li class="ms-auto nav-item" id="cp">
+                        &#169; AMF
+                    </li>
+                </ul>
+            </div>
+        </center>
+        <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+            })
+
+            function displayDate() {
+            const d = new Date();
+            document.getElementById("popover").setAttribute("data-bs-content",d);
+            }
+        </script>
+
+    </body>
+</html>
